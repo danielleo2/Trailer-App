@@ -1,4 +1,4 @@
-import {useEffect, useState, useRef} from 'react';
+import {useEffect, useState} from 'react';
 import React from 'react';
 import axios from 'axios';
 import YouTube from 'react-youtube';
@@ -50,7 +50,7 @@ function App() {
 
   useEffect(() => {
     fetchMovies()
-  }, [])
+  }, [movie])
 
   const renderMovies = () => (
     movies.map(movie => (
@@ -95,7 +95,7 @@ function App() {
       getTrailerKey().then((key) => {
         setTrailerKey(key);
       });
-    }, [selectMovie]);  // The useEffect hook will run whenever the selectMovie value changes
+    }, [movieSelection]);  // The useEffect hook will run whenever the selectMovie value changes
     
     const [isVisible, setIsVisible] = useState(false);
 
@@ -118,7 +118,6 @@ function App() {
           </div>
         </div>
         )
-    {/*return trailerKey ? <YouTube videoId={trailerKey} opts={{width:"720px", height:"480px",}} /> : null; */}
   };
 
   return (
@@ -131,15 +130,6 @@ function App() {
         </form>
       </header>
       {movieSelection ? MyComponent() : console.log('failed')}
-      {/* <div className='hero-ctn' style={{backgroundImage: `url('${imagePath}${selectMovie.backdrop_path}')`}}>
-      {movieSelection ? MyComponent() : console.log('failed')}
-        <div className='hero'>
-          <button className='play-btn'>Ver Trailer</button>
-          <h1>{selectMovie.title}</h1>
-          <div className='movie-overview'>{selectMovie.overview ? <p>{selectMovie.overview}</p> : null}</div>
-        </div>
-        
-      </div> */}
       <div className='container'>
         {renderMovies()}
       </div>
