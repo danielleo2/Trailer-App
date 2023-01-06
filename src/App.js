@@ -50,7 +50,7 @@ function App() {
 
   useEffect(() => {
     fetchMovies()
-  }, [movie])
+  }, [movies])
 
   const renderMovies = () => (
     movies.map(movie => (
