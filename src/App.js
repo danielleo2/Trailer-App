@@ -50,7 +50,7 @@ function App() {
 
   useEffect(() => {
     fetchMovies()
-  }, movies)
+  }, [])
 
   const renderMovies = () => (
     movies.map(movie => (
@@ -95,7 +95,7 @@ function App() {
       getTrailerKey().then((key) => {
         setTrailerKey(key);
       });
-    }, [selectMovie]);  // The useEffect hook will run whenever the selectMovie value changes
+    }, []);  // The useEffect hook will run whenever the selectMovie value changes
     
     const [isVisible, setIsVisible] = useState(false);
 
