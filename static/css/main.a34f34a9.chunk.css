@@ -139,7 +139,7 @@ button {
     justify-content: center;
     align-items: center;
     min-width: 240px;
-    overflow: scroll;
+    overflow: hidden;
 }
 
 /*# sourceMappingURL=main.a34f34a9.chunk.css.map */
