@@ -128,6 +128,10 @@ button {
     transform: scale(1.1)
 }
 
+.play-btn:focus::before {
+    content: "Cerrar";
+}
+
 .trailer-none {
     display: none
 }
@@ -165,10 +169,6 @@ button {
         overflow: overlay;
         align-items: center;
         justify-content: center;
-    }
-
-    .play-btn:focus::before {
-        content: "Cerrar";
     }
 }
 
