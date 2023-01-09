@@ -153,6 +153,23 @@ button {
     .search-bar {
         flex-flow: column;
     }
+
+    .trailer-show {
+        display: flex;
+        position: sticky;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        min-width: 100%;
+        overflow: overlay;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .play-btn:focus::before {
+        content: "Cerrar";
+    }
 }
 
 /*# sourceMappingURL=main.a34f34a9.chunk.css.map */
