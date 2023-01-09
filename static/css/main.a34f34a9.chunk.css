@@ -129,7 +129,7 @@ button {
 }
 
 .play-btn:focus::before {
-    content: "Cerrar";
+    content: "Cerrar ";
 }
 
 .trailer-none {
